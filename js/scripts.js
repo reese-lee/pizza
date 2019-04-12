@@ -1,23 +1,13 @@
 // Business logic for Pizza
 function Pizza(toppings, size, price) {
-  // this.sauce = [];
-  this.toppings = [];
-  // this.crust = [];
+  this.toppings = toppings;
   this.size = size;
   this.price = price
 }
 
-// Pizza.prototype.addSauce = function(sauce) {
-//   this.sauce.push(sauce);
-// }
-
 Pizza.prototype.addToppings = function(toppings) {
-  this.toppings.push(toppingSelected);
+  this.toppings.push(toppings);
 }
-
-// Pizza.prototype.addCrust = function(crust) {
-//   this.crust.push(crust);
-// }
 
 Pizza.prototype.addSize = function(size) {
   this.size = sizeSelected;
@@ -36,20 +26,12 @@ Pizza.prototype.getPrice = function(price) {
   } return this.price;
 };
 
-// function showPizza() {
-//   var selectedPizza = PizzaStore.findPizza(pizza);
-//   $("#selectedSize").html(pizza.size);
-//   $("#selectedCrust").html(pizza.crust);
-//   $("#selectedTopping").html(pizza.topping);
-//   $("#selectedSauce"),html(pizza.sauce)
-// }
-
 // User interface logic
 $(function() {
   $("form#pizzaSelections").submit(function(event) {
     event.preventDefault();
     var sizeInput = $("input:radio[name=size]:checked").val();
-    var toppingsInput = $.each($("input:checkbox[name=toppings]:checked"), function () {
+    var toppings = $.each($("input:checkbox[name=toppings]:checked"), function () {
       toppings.push($(this).val());
     });
     // var crustInput = $(parseInt("input:radio[name=crust]:checked")).val();
@@ -58,7 +40,10 @@ $(function() {
     // var pizzaMade = new Pizza(toppings, size, price);
     // pizzaMade.getPrice();
     // console.log(pizzaMade);
-    console.log(toppingsInput);
+    var pizzaMade = new Pizza(toppings, size, price);
+    var price = pizzaMade.getPrice();
+    console.log(pizzaMade);
+    console.log(price);
 
 
   });
