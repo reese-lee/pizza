@@ -11,11 +11,11 @@
   <body class="container">
     <h1>Reese's Candy Pizza Shop</h1>
     <h2>Welcome to the world's first gourmet candy pizza shop!</h2>
-    <h4>We love options! Make your selections below*:</h4>
+    <h4>We love options! Make your selections below:</h4>
     <form id="pizzaSelections">
 <!-- Options for Size -->
      <div class="form-group" id=size>
-       1. Choose a size!
+       Choose a size!
        <div class="radio1">
          <label for="size">
            <input type="radio" name="size" value=1>
@@ -36,7 +36,7 @@
        </div>
      </div>
 <!-- Options for Sauce -->
-     <div class="form-group" id=sauce>
+     <!-- <div class="form-group" id=sauce>
        2. Choose a sauce!
        <div class="radio2">
          <label for="sauce">
@@ -56,38 +56,23 @@
            Vanilla chantilly cream
          </label>
        </div>
-     </div>
+     </div> -->
 <!-- Options for Toppings -->
       <div class="form-group" id=toppings>
-        3. Choose a topping!
-          <p>*Due to federal regulations and guidelines for healthy eating we are not permitted to allow you to combine toppings at this time</p>
-        <div class="radio3">
-          <label for="toppings">
-            <input type="radio" name="toppings" value=1>
-            Gummy Bears
-          </label>
-        </div>
-        <div class="radio3">
-          <label for="toppings">
-            <input type="radio" name="toppings" value=1>
-            Chocolate Chips
-          </label>
-        </div>
-        <div class="radio3">
-          <label for="toppings">
-            <input type="radio" name="toppings" value=2>
-            Peach Slices
-          </label>
-        </div>
-        <div class="radio3">
-          <label for="toppings">
-            <input type="radio" name="toppings" value=3>
-            Lucky Charm Charms
-          </label>
-        </div>
+        <div class="form-group">
+         <label for="toppings">Choose your toppings!</label>
+         <select multiple class="form-control" id="toppings">
+           <option>Gummy Bears</option>
+           <option>Chocolate Chips</option>
+           <option>Lucky Charm Charms</option>
+           <!-- <option>4</option>
+           <option>5</option> -->
+         </select>
+       </div>
+
       </div>
 <!-- Options for Crust -->
-      <div class="form-group" id=crust>
+      <!-- <div class="form-group" id=crust>
         4. Choose a crust!
         <div class="radio4">
           <label for="crust">
@@ -112,9 +97,9 @@
             <input type="radio" name="crust" value=3>
             Cookie - Snickerdoodle
           </label>
-        </div>
+        </div> -->
         <button type="submit" class ="btn" name="button">Gimme me my pizza!</button>
-      </div>
+    <!--  </div> -->
 
       <div class="results">
         <h4>This is the gourmet candy pizza you have built:</h4>
