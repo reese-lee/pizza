@@ -53,13 +53,9 @@ $(function() {
     });
     var pizzaMade = new Pizza(toppings, size);
     var price = pizzaMade.getPrice();
-    console.log(pizzaMade);
-    console.log(price);
     $(".results").show();
     $("#sizeSelected").text(pizzaMade.size);
     $("#toppingsSelected").text(pizzaMade.toppings);
     $("#priceOfSelected").text(pizzaMade.price);
-
-
   });
 });
