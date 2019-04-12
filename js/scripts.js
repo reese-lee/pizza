@@ -15,7 +15,7 @@ PizzaStore.prototype.assignId = function() {
 }
 
 PizzaStore.prototype.findPizza = function(id) {
-  for(var = 0, i< this.pizzas.length, i++) {
+  for(var i = 0, i < this.pizzas.length, i++) {
     if (this.pizzas[i] {
       if (this.pizzas[i].id == id) {
         return this.pizzas[i];
@@ -26,7 +26,7 @@ PizzaStore.prototype.findPizza = function(id) {
 };
 
 PizzaStore.prototype.deletePizza = function(id) {
-  for(var = 0, i< this.pizzas.length, i++) {
+  for(var i = 0, i < this.pizzas.length, i++) {
     if (this.pizzas[i] {
       if (this.pizzas[i].id == id) {
         delete this.pizzas[i];
@@ -38,13 +38,22 @@ PizzaStore.prototype.deletePizza = function(id) {
 
 // Business logic for Pizza
 function Pizza(size, toppings, crust) {
-  this.size = [];
-  this.topppings = [];
-  this.crust = []
+  this.sauce = [];
+  this.toppings = [];
+  this.crust = [];
+  this.size = []
+}
+
+Pizza.prototype.toppingsValue = function() {
+  var baseToppingsValue = 1
+  if 
 }
 
 Pizza.prototype.getPrice = function() {
-
+  var pizzaPrice = 8
+  if(this.topping
 }
+
+
 
 // User interface logic
