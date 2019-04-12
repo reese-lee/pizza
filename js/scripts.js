@@ -6,7 +6,7 @@
 //
 // PizzaStore.prototype.addPizza = function(pizza) {
 //   pizza.Id = this.assignId();
-//   this.pizzas.push(push)
+//   this.pizzas.push(pizza)
 // }
 //
 // PizzaStore.prototype.assignId = function() {
@@ -27,7 +27,7 @@
 //
 // PizzaStore.prototype.deletePizza = function(id) {
 //   for(var i = 0, i < this.pizzas.length, i++) {
-//     if (this.pizzas[i] {
+//     if (this.pizzas[i]) {
 //       if (this.pizzas[i].id == id) {
 //         delete this.pizzas[i];
 //       }
@@ -37,11 +37,28 @@
 // };
 
 // Business logic for Pizza
-function Pizza(sauce, toppings, crust, size) {
-  this.sauce = [];
-  this.toppings = [];
-  this.crust = [];
-  this.size = []
+function Pizza(topping,size, price) {
+  // this.sauce = [];
+  this.topping = [];
+  // this.crust = [];
+  this.size = size;
+  this.price = price
+}
+
+// Pizza.prototype.addSauce = function(sauce) {
+//   this.sauce.push(sauce);
+// }
+
+Pizza.prototype.addTopping = function(topping) {
+  this.topping.push(topping);
+}
+
+// Pizza.prototype.addCrust = function(crust) {
+//   this.crust.push(crust);
+// }
+
+Pizza.prototype.addSize = function(size) {
+  this.sauce.push(size);
 }
 
 Pizza.prototype.getPrice = function() {
@@ -110,6 +127,13 @@ Pizza.prototype.getPrice = function() {
 };
 };
 
+function showPizza() {
+  var selectedPizza = PizzaStore.findPizza(pizza);
+  $("#selectedSize").html(pizza.size);
+  $("#selectedCrust").html(pizza.crust);
+  $("#selectedTopping").html(pizza.topping);
+  $("#selectedSauce"),html(pizza.sauce)
+}
 
 
 
@@ -122,10 +146,10 @@ $(function() {
     var toppingsInput = $(parseInt("input:radio[name=toppings]:checked")).val();
     var crustInput = $(parseInt("input:radio[name=crust]:checked")).val();
     var sauceInput = $(parseInt("input:radio[name=sauce]:checked")).val();
-    var pizzaPrice = (sizeInput + toppingsInput + crustInput + sauceInput);
+    var pizzaPrice = sizeInput + toppingsInput + crustInput + sauceInput;
     var pizzaMade = new Pizza(sauce, toppings, crust, size);
     pizzaMade.getPrice();
-    console.log(pizzaPrice);
+    console.log(pizzaMade);
 
 
   });
