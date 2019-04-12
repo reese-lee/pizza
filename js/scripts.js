@@ -2,7 +2,6 @@
 function Pizza(toppings, size, price) {
   this.toppings = toppings;
   this.size = size;
-  this.price = price
 }
 
 Pizza.prototype.addToppings = function(toppings) {
@@ -15,15 +14,39 @@ Pizza.prototype.addSize = function(size) {
 
 Pizza.prototype.getPrice = function(price) {
   if (this.size === "Petite") {
+    if (this.toppings === "gummy" || this.toppings === "choc" || this.toppings === "charms") {
     this.price = 8;
-    this.price += this.toppings.length;
-  } else if (this.size === "In-Between") {
+    } else if ((this.toppings === "gummy" && this.toppings === "choc") || (this.toppings === "gummy" && this.toppings === "charms") || (this.toppings === "choc" && this.toppings ==="charms")) {
+      this.price = 8;
+      this.price +=4;
+    } else {
+      this.price = 8;
+      this.price +=8;
+    }
+  return this.price;
+  if (this.size === "In-Between") {
+    if (this.toppings === "gummy" || this.toppings === "choc" || this.toppings === "charms")
     this.price = 10;
-    this.price += this.toppings.length + 2;
-  } else if (this.size === "Maximum") {
+    } else if ((this.toppings === "gummy" && this.toppings === "choc") || (this.toppings === "gummy" && this.toppings === "charms") || (this.toppings === "choc" && this.toppings ==="charms")) {
+      this.price = 10
+      this.price +=4;
+    } else {
+      this.price = 10
+      this.price +=8;
+    }
+  return this.price;
+  if (this.size === "Maximum") {
+    if (this.toppings === "gummy" || this.toppings === "choc" || this.toppings === "charms")
     this.price = 12;
-    this.price += this.toppings.length + 4;
-  } return this.price;
+    } else if ((this.toppings === "gummy" && this.toppings === "choc") || (this.toppings === "gummy" && this.toppings === "charms") || (this.toppings === "choc" && this.toppings ==="charms")) {
+      this.price = 12
+      this.price +=4;
+    } else {
+      this.price = 12
+      this.price +=8;
+    }
+  };
+  return this.price;
 };
 
 // User interface logic
@@ -31,7 +54,7 @@ $(function() {
   $("form#pizzaSelections").submit(function(event) {
     event.preventDefault();
     var sizeInput = $("input:radio[name=size]:checked").val();
-    var toppings = $.each($("input:checkbox[name=toppings]:checked"), function () {
+    var toppings = $.each($("input:checkbox[name=toppings]:checked"), function() {
       toppings.push($(this).val());
     });
     // var crustInput = $(parseInt("input:radio[name=crust]:checked")).val();
