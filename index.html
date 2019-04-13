@@ -1,155 +1,67 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <meta charset="utf-8">
-    <title>Candy Pizza Shop</title>
-  </head>
-  <body class="container">
-    <h1>Reese's Candy Pizza Shop</h1>
-    <h2>Welcome to the world's first gourmet candy pizza shop!</h2>
-    <h4>We love options! Make your selections below:</h4>
-    <form id="pizzaSelections">
-<!-- Options for Size -->
-     <div class="form-group" id=size>
-       Choose a size!
-       <div class="radio1">
-         <label for="size">
-           <input type="radio" name="size" value=1>
-           Petite
-         </label>
-       </div>
-       <div class="radio1">
-         <label for="size">
-           <input type="radio" name="size" value=2>
-           In-Between
-         </label>
-       </div>
-       <div class="radio1">
-         <label for="size">
-           <input type="radio" name="size" value=3>
-           Maximum
-         </label>
-       </div>
-     </div>
-<!-- Options for Sauce -->
-     <!-- <div class="form-group" id=sauce>
-       2. Choose a sauce!
-       <div class="radio2">
-         <label for="sauce">
-           <input type="radio" name="sauce" value=1>
-           Melted marshmallow
-         </label>
-       </div>
-       <div class="radio2">
-         <label for="sauce">
-           <input type="radio" name="sauce" value=2>
-           Salted caramel
-         </label>
-       </div>
-       <div class="radio2">
-         <label for="sauce">
-           <input type="radio" name="sauce" value=3>
-           Vanilla chantilly cream
-         </label>
-       </div>
-     </div> -->
-<!-- Options for Toppings -->
-      <!-- <div class="form-group" id=toppings>
-        <div class="form-group">
-         <label for="toppings">Choose your toppings!</label>
-         <select multiple class="form-control" id="toppings">
-           <option>Gummy Bears</option>
-           <option>Chocolate Chips</option>
-           <option>Lucky Charm Charms</option>
-           <!-- <option>4</option>
-           <option>5</option> -->
-         <!-- </select> -->
-       <!-- </div> -->
-
-      <!-- </div> -->
-
-      <div class="toppingOptions">
-         <div class="form-check">
-           <input class="form-check-input" type="checkbox" value="gummy" name="topping">
-           <label class="form-check-label" for="gummy">
-             Gummy Bears
-           </label>
-         </div>
-         <div class="form-check">
-           <input class="form-check-input" type="checkbox" value="choc" name="topping">
-           <label class="form-check-label" for="choc">
-             Chocolate Chips
-           </label>
-         </div>
-         <div class="form-check">
-           <input class="form-check-input" type="checkbox" value="charms" name="topping">
-           <label class="form-check-label" for="charms">
-             Lucky Charm Charms
-           </label>
-         </div>
-         <div class="form-check">
-           <input class="form-check-input" type="checkbox" value="sugar" name="topping">
-           <label class="form-check-label" for="sugar">
-             Sugar Cubes
-           </label>
-         </div>
-         <!-- <div class="form-check">
-           <input class="form-check-input" type="checkbox" value="pineapple" name="topping">
-           <label class="form-check-label" for="pineapple">
-             Pineapple
-           </label>
-         </div>
-         <div class="form-check">
-           <input class="form-check-input" type="checkbox" value="clams" name="topping">
-           <label class="form-check-label" for="clams">
-             Clams
-           </label>
-         </div>
-         <div class="form-check">
-           <input class="form-check-input" type="checkbox" value="peas" name="topping">
-           <label class="form-check-label" for="peas">
-             Peas
-           </label>
-         </div> -->
-       </div>
-<!-- Options for Crust -->
-      <!-- <div class="form-group" id=crust>
-        4. Choose a crust!
-        <div class="radio4">
-          <label for="crust">
-            <input type="radio" name="crust" value=1>
-            Pie
-          </label>
-        </div>
-        <div class="radio4">
-          <label for="crust">
-            <input type="radio" name="crust" value=1>
-            Cookie - Sugar
-          </label>
-        </div>
-        <div class="radio4">
-          <label for="crust">
-            <input type="radio" name="crust" value=2>
-            Cookie - Chocolate Chip
-          </label>
-        </div>
-        <div class="radio4">
-          <label for="crust">
-            <input type="radio" name="crust" value=3>
-            Cookie - Snickerdoodle
-          </label>
-        </div> -->
-        <button type="submit" class ="btn" name="button">Gimme me my pizza!</button>
-    <!--  </div> -->
-
-      <div class="results">
-        <h4>This is the gourmet candy pizza you have built:</h4>
-        <span id="selectedPizza"></span>
-        <button type="submit" class ="btn" name="button">Order now!</button>
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Roboto+Slab" rel="stylesheet">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <meta charset="utf-8">
+  <title>Candy Pizza Shop</title>
+</head>
+<body class="container">
+  <h1>Sweety Pie</h1>
+  <form id="pizzaSelections">
+    <div class="form-group" id="sizeInput">
+      <h2>Welcome to Reese's gourmet candy pizza shop!</h2>
+      <h4>We love options! Make your selections below:</h4>
+      <br>
+      Choose a size!
+      <div class="radio1">
+        <label for="sizeInput">
+          <input type="radio" name="sizeInput" value="Petite">
+          Petite
+        </label>
       </div>
+      <div class="radio1">
+        <label for="sizeInput">
+          <input type="radio" name="sizeInput" value="In-Between">
+          In-Between
+        </label>
+      </div>
+      <div class="radio1">
+        <label for="sizeInput">
+          <input type="radio" name="sizeInput" value="Maximum">
+          Maximum
+        </label>
+      </div>
+    </div>
+
+    <div class="toppingOptions">
+      Choose your toppings!
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="gummy bears" name="toppings">
+        <label class="form-check-label" for="toppings">
+          Gummy Bears
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="chocolate chips" name="toppings">
+        <label class="form-check-label" for="toppings">
+          Chocolate Chips
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Lucky Charm Charms" name="toppings">
+        <label class="form-check-label" for="toppings">
+          Lucky Charm Charms
+        </label>
+      </div>
+      <button type="submit" class ="btn" name="button">Gimme me my pizza!</button>
+    </div>
+    <div class="results">
+      <h4>This is the gourmet candy pizza you have built:</h4>
+      A <span id="sizeSelected"></span> candy pizza with: <span id="toppingsSelected"></span>, for a total of $<span id="priceOfSelected"></span>.
+    </div>
   </body>
-</html>
+  </html>
