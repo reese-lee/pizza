@@ -1,0 +1,29 @@
+.results {
+  display: none;
+}
+
+h1 {
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 75pt;
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  color: #2fd6b2;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+  background-image: url("candybg.jpg");
+  text-align: center;
+  color: #ef137a;
+}
+
+#pizzaSelections {
+  width: auto;
+  height: auto;
+  padding: 30px;
+  margin: 30px;
+  background-color: white;
+}
