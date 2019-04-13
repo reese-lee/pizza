@@ -8,16 +8,17 @@
 
 ## Description
 
-This is a webpage for a pizza company where a user can choose one or more individual toppings (cheese, pepperoni, artichoke, anchovy, etc) and a size to order a pizza and see the final cost.
+This is a webpage for a pizza company where a user can choose one or more individual toppings and a size to order a pizza and see the final cost.
 
 ## Specs
 
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
-| Allow user to pick a pizza | *click on a pizza* | Shows topping options |
+| Allow user to pick a pizza size | *click on a pizza size* | Shows selected size |
 | Allow user to choose a topping | *click on a topping* | Shows topping selected |
 | Allow user to choose more than one topping | *click on multiple toppings* | Shows toppings selected |
-| Allow user to click "order" | *click "order" | Displays price of pizza |
+| Allow user to see price | *clicks desired options* | Show price of pizza |
+| Allow user to click a "See my pizza" button | *click "See my pizza"* | Displays all selected options for desired pizza |
 
 
 ## Bugs
