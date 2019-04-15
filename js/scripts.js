@@ -45,7 +45,6 @@ $(function() {
       toppings.push($(this).val());
     });
     pizzaMade.getPrice();
-    console.log(toppings);
     var price = pizzaMade.cost;
     $(".results").show();
     $("form#pizzaSelections").hide();
