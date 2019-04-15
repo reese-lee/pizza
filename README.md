@@ -18,7 +18,7 @@ This is a webpage for a pizza company where a user can choose one or more indivi
 | Allow user to choose a topping | *click on a topping* | Shows topping selected |
 | Allow user to choose more than one topping | *click on multiple toppings* | Shows toppings selected |
 | Allow user to see price | *clicks desired options* | Show price of pizza |
-| Allow user to click a "See my pizza" button | *click "See my pizza"* | Displays all selected options for desired pizza |
+| Allow user to click a "Gimme my pizza!" button | *click "Gimme my pizza!"* | Displays all selected options for desired pizza, including price |
 
 
 ## Bugs
