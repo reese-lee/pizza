@@ -1,5 +1,14 @@
 .results {
   display: none;
+  width: auto;
+  height: auto;
+  padding: 30px;
+  margin: 30px;
+  background-color: white;
+}
+
+#sizeSelected, #sauceSelected, #crustSelected, #toppingsSelected, #priceOfSelected {
+  font-weight: bold;
 }
 
 h1 {
